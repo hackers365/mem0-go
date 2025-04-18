@@ -249,3 +249,49 @@ MIT
 ### How to handle API rate limiting?
 
 When encountering API rate limiting, it's recommended to implement an exponential backoff retry mechanism. Example code:
+
+```go
+func retryWithBackoff(fn func() error) error {
+	var err error
+	for i := 0; i < 3; i++ {
+		err = fn()
+		if err == nil {
+			return nil
+		}
+		if apiErr, ok := err.(*client.APIError); ok && apiErr.StatusCode == 429 {
+			time.Sleep(time.Duration(math.Pow(2, float64(i))) * time.Second)
+			continue
+		}
+		return err
+	}
+	return err
+}
+```
+
+### How to batch process memories?
+
+Use the `AddBatch` method to add multiple memories at once:
+
+```go
+memories := []string{"memory1", "memory2", "memory3"}
+results, err := client.AddBatch(memories, types.MemoryOptions{})
+```
+
+## Contributing
+
+We welcome contributions of any kind! Before submitting a Pull Request, please ensure:
+
+1. Code follows Go standard formatting
+2. Necessary tests are added
+3. Relevant documentation is updated
+4. Commit messages are clear and descriptive
+
+## Changelog
+
+### v0.1.0 (2025-04-18)
+- Initial version release
+- Support for basic memory management features
+- Support for user management features
+- Support for project management features
+- Support for webhook management features
+- Support for feedback features

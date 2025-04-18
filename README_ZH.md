@@ -286,7 +286,7 @@ results, err := client.AddBatch(memories, types.MemoryOptions{})
 
 ## 变更日志
 
-### v0.1.0 (2024-04-18)
+### v0.1.0 (2025-04-18)
 - 初始版本发布
 - 支持基本的内存管理功能
 - 支持用户管理功能
