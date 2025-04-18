@@ -1,4 +1,4 @@
-.PHONY: build test clean
+.PHONY: build test clean release snapshot
 
 build:
 	mkdir -p bin
@@ -17,4 +17,11 @@ all: clean build test
 
 deps:
 	go mod tidy
-	go mod download 
+	go mod download
+
+# Release commands
+release:
+	goreleaser release --clean
+
+snapshot:
+	goreleaser release --snapshot --clean --skip-publish 
