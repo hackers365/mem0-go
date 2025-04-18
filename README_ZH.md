@@ -10,7 +10,7 @@ go get github.com/bytectlgo/mem0-go
 
 ## 版本要求
 
-- Go 1.16 或更高版本
+- Go 1.18 或更高版本
 
 ## 快速开始
 

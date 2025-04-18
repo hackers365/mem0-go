@@ -12,7 +12,7 @@ go get github.com/bytectlgo/mem0-go
 
 ## Requirements
 
-- Go 1.16 or higher
+- Go 1.18 or higher
 
 ## Quick Start
 
