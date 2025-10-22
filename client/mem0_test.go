@@ -6,7 +6,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/bytectlgo/mem0-go/types"
+	"github.com/hackers365/mem0-go/types"
 	"github.com/stretchr/testify/assert"
 )
 

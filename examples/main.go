@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/bytectlgo/mem0-go/client"
-	"github.com/bytectlgo/mem0-go/types"
+	"github.com/hackers365/mem0-go/client"
+	"github.com/hackers365/mem0-go/types"
 )
 
 func main() {
