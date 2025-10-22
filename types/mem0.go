@@ -51,6 +51,7 @@ type MemoryOptions struct {
 	CustomCategories   []CustomCategory `json:"custom_categories,omitempty"`
 	CustomInstructions string           `json:"custom_instructions,omitempty"`
 	Messages           []Message        `json:"messages,omitempty"`
+	AsyncMode          bool             `json:"async_mode,omitempty"`
 }
 
 // CustomCategory 定义自定义类别
