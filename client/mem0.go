@@ -9,7 +9,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/bytectlgo/mem0-go/types"
+	"github.com/hackers365/mem0-go/types"
 )
 
 // APIError 定义 API 错误
